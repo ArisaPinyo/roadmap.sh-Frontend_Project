@@ -8,4 +8,4 @@ create a simple HTML only website with multiple pages.
 - Structure in a way that you can easily add styles later.
 - Add SEO meta tags to the website.
 
-Reference: https://roadmap.sh/projects/basic-html-website
+Reference: [https://roadmap.sh/projects/basic-html-website](https://roadmap.sh/projects/basic-html-website)
