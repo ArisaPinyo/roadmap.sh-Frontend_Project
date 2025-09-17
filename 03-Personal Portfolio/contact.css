@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kanit:wght@400;700;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Basic Reset */
+:root {
+    --color-pink: #E7CCCC;
+    --color-craem: #EDE8DC;
+    --color-matcha: #A5B68D;
+    --color-green: #C1CFA1;
+}
+
+@font-face {
+    font-family: 'PopRumCute';
+    src: url(font/poprumcute/PopRumCute.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: DM Sans;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 0%;
+    margin: 0%;
+}
+
+/* ===== Header ===== */
+
+header {
+    display: flex;
+    justify-content: space-between; /* logo Left, nav Right */
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.logo h2 {
+    font-size: 40px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+/* ===== Title ===== */
+
+section.title {
+    display: flex;
+    justify-content: center;     /* จัดกลางแนวนอน */
+    height: 50vh;   /* จัดกลางแนวตั้ง */
+    align-items: center;    /* สูงเท่าหน้าจอ */
+    flex-direction: column;     /* เรียง h1 และ  p ลงล่าง */
+    text-align: center;
+}
+
+
+/* ===== Navication ===== */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: aqua;
+}
+
+/* ===== Sections & Layout ===== */
+main {
+   padding: 2rem; 
+}
+
+h1, h3 {
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.title-head{
+    font-size: 50px;
+    font-family: 'PopRumCute', sans-serif;
+}
+
+p {
+    margin-bottom: 0.8rem;
+}
+
+
+/* ===== Footer ===== */
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+
+/* ===== Contact Form ===== */
+
+form {
+    max-width: 600px;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form label {
+    display: block;
+    margin: 0.8rem 0 0.3rem;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Message box */
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form button {
+    margin-top: 1rem;
+    background: #333;
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background: #00adb5;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    flex: 1;
+}
+
+
+
+/* ===== Responsive Design ===== */
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items:center;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+
+    /* Responsive มือถือ -> เรียงลง */
+    .content-grid {
+        grid-template-columns: 1fr; /* เหลือแถวเดียว */
+    }
+}
