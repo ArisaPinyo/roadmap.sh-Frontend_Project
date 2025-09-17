@@ -3,9 +3,10 @@
 
 /* Basic Reset */
 :root {
-    --color-pink: #E7CCCC;
+    --color-pink: #efcfcf;
+    --color--candy: #d6abab;
     --color-craem: #EDE8DC;
-    --color-matcha: #A5B68D;
+    --color-matcha: #7d8a68;
     --color-green: #C1CFA1;
 }
 
@@ -16,6 +17,7 @@
     font-style: normal;
 }
 
+
 * {
     margin: 0%;
     padding: 0%;
@@ -25,7 +27,7 @@
 body {
     font-family: DM Sans;
     line-height: 1.6;
-    background-color: #f9f9f9;
+    background-color: var(--color-craem);
     color: #333;
     padding: 0%;
     margin: 0%;
@@ -38,6 +40,7 @@ header {
     justify-content: space-between; /* logo Left, nav Right */
     align-items: center;
     padding: 1rem 2rem;
+    background: var(--color-matcha);
 }
 
 .logo {
@@ -47,7 +50,7 @@ header {
 }
 
 img {
-    width: 50px;
+    width: 80px;
     height: auto;
     border-radius: 50%;
 }
@@ -56,7 +59,9 @@ img {
     font-size: 40px;
     font-weight: bold;
     padding-left: 20px;
+    font-family: 'PopRumCute', sans-serif;
 }
+
 
 /* ===== Title ===== */
 
@@ -79,14 +84,14 @@ nav ul {
 }
 
 nav a {
-    color: #000000;
+    color: #333;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: aqua;
+    color: var(--color-pink);
 }
 
 /* ===== Sections & Layout ===== */
@@ -161,7 +166,7 @@ form button {
 }
 
 form button:hover {
-    background: #00adb5;
+    background: var(--color--candy);
 }
 
 .form-row {

@@ -130,7 +130,6 @@ p {
     align-items: stretch;
     padding: 0 2rem;
     height: 100%;
-    
 }
 
 /* ===== Inside Box ===== */
@@ -217,6 +216,54 @@ p {
 .projects ul li a:hover::after {
     width: 100%;
 } 
+
+/* ===== Aside (Articles) =====  */
+
+.articles {
+    background: #ffffff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.articles ul li a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-matcha);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.articles ul {
+    list-style: square;
+    padding-left: 1.5rem;
+}
+
+.articles li {
+    margin: 0.5rem 0;
+}
+
+.articles a{
+    text-decoration: none;
+    color: var(--color-matcha);
+}
+
+.articles ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* ระยะห่างจากตัวอักษร */
+    width: 0;
+    height: 2px;
+    background: #C1CFA1;
+    transition: width 0.3s ease;
+}
+
+.articles ul li a:hover::after {
+    width: 100%;
+} 
+
 
 /* ===== Education list ===== */
 
