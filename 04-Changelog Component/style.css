@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single+Ink:wght@100..900&family=Comfortaa:wght@300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kanit:wght@400;700;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --color-pink: #efcfcf;
+  --color--candy: #d6abab;
+  --color-craem: #EDE8DC;
+  --color-matcha: #7d8a68;
+  --color-green: #C1CFA1;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Comfortaa;
+  background: var(--color-craem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.box {
+  max-width: 100%;
+  background: var(--color-pink);
+  padding: 50px 30px;
+  border-radius: 5%;
+  border: 2px solid var(--color--candy);
+}
+
+.box h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.box p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.timeline {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline::before {       /* สร้างเส้นแนวตั้ง */
+  content: "";              /* จำเป็นสำหรับ pseudo-element (: :before)/ (: :after) ถึงจะสร้าง element เสมือนขึ้นมาได้ */
+  position: absolute;       /* วางเส้นแบบ absolute เพื่อใช้ซ้อนทับในตำแหน่งที่กำหนด */
+  left: 160px;       /* ขยับเว้นให้อยู่ห่างจากซ้าย 10px (ตรงกับตำแหน่งจุดกลมแต่ละอััน) */
+  top: 0;         /* ขยายเส้นจากด้านบนถึงด้านล่างของ .timeline */
+  bottom: 0;      /* ขยายเส้นจากด้านบนถึงด้านล่างของ .timeline */
+  width: 2px;     /* ความหนาของเส้น */
+  background: var(--color-matcha);
+}
+
+.timeline-item {
+  display: flex;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.timeline-item::before {        /* สร้างวงกลม */
+  content: "";
+  position: absolute;
+  left: 155px;    /* ตรงกลางเส้น */
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-matcha);
+  z-index: 1;  /* เป็น ลำดับชั้น (stacking order) ของ element ในแนว แกน Z (เข้า-ออกจากหน้าจอ)
+  ค่า z-index ยิ่งมาก → ยิ่งอยู่ “ข้างบน” ของ element อื่น
+  ค่า z-index น้อยหรือไม่กำหนด → จะอยู่ตามลำดับปกติ (บางครั้งอาจถูก element อื่นบัง) */
+}
+
+.date {
+  width: 180px;     /* บังคับความกว้าง 160px ตลอด เวลา Flexbox จัด จะได้แถวเรียงตรงกันสวยๆ */
+  text-align: start;
+  padding-left: -50px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.content {
+  margin-left: 30px;    /* ระยะห่างจากเส้น timeline */
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn {
+  display: block;
+  margin: auto;
+  padding: 15px 12px;
+  text-align: center;
+  background: var(--color-matcha);
+  border-radius: 6px;
+  border-color: var(--color-green);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Comfortaa;
+}
+
+.btn:hover{
+  background-color: var(--color-green);
+}
+
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;     /* เอาเส้น timeline มาชิดซ้าย */
+  }
+
+  .timeline-item::before {
+    left: 14px;       /* วงกลมอยู่ตรงเส้น  */
+  }
+
+  .date {
+    width: auto;    /* ไม่ fix ความกว้าง */
+    margin-left: 40px;    /* ขยับใหเอยู่หลังเส้น */
+    font-size: 12px;
+  }
+
+  .content {
+    margin-left: 40px;      /*  ชิดกับ Date */
+    font-size: 14px;
+  }
+}
+
